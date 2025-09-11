@@ -1,0 +1,182 @@
+:root {
+    --background: #fafafa;
+    --border: #dbdbdb;
+    --text: #262626;
+    --subdued: #8e8e8e;
+    --primary: #0095f6;
+    --facebook: #385185;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: var(--background);
+    color: var(--text);
+}
+
+.container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px 16px;
+}
+
+.phone-illustration { display: none; }
+
+@media (min-width: 876px) {
+    .phone-illustration { display: block; }
+}
+
+.phone-frame {
+    width: 380px;
+    height: 580px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: #000;
+    padding: 12px;
+    position: relative;
+}
+.phone-frame .screen {
+    height: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid #222;
+    position: relative;
+}
+.story-strip {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+}
+.story-strip span {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+.feed-card { padding: 12px; }
+.feed-card .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #333;
+    border: 1px solid #444;
+}
+.feed-card .image {
+    margin-top: 12px;
+    height: 260px;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.auth { width: 100%; max-width: 350px; }
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 24px 40px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    font-family: "Grand Hotel", cursive;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 400;
+    margin: 24px 0 12px;
+}
+
+.form { display: flex; flex-direction: column; gap: 8px; }
+.form input {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    background: #fafafa;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.form input:focus {
+    outline: none;
+    border-color: #a8a8a8;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    margin-top: 8px;
+}
+.btn-primary:disabled { opacity: .5; cursor: default; }
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 10px 0;
+}
+.divider span { flex: 1; height: 1px; background: var(--border); }
+.divider p { margin: 0; color: var(--subdued); font-size: 12px; font-weight: 600; }
+
+.btn-facebook {
+    background: transparent;
+    color: var(--facebook);
+}
+
+.link { color: #00376b; text-decoration: none; }
+.link:hover { text-decoration: underline; }
+.forgot { font-size: 12px; text-align: center; margin-top: 8px; }
+
+.signup-card { text-align: center; }
+.signup-card p { margin: 14px 0; font-size: 14px; }
+
+.apps { text-align: center; margin-top: 16px; }
+.apps p { color: var(--text); font-size: 14px; }
+.badges { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+.store-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    background: #fff;
+}
+
+.footer { text-align: center; padding: 24px 16px 40px; color: var(--subdued); }
+.links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 16px; }
+.links a { color: var(--subdued); text-decoration: none; font-size: 12px; }
+.links a:hover { text-decoration: underline; }
+.copyright { font-size: 12px; margin: 0; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
